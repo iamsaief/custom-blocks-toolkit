@@ -1,9 +1,9 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "sf-blocks/fancy-header",
+	"name": "sf/fancy-header",
 	"title": "Fancy Header",
-	"category": "text",
+	"category": "sf",
 	"icon": "block-default",
 	"description": "Shows bunch of dummy text",
 	"keywords": ["alert", "message"],

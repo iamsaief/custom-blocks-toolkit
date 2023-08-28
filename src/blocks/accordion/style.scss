@@ -1,0 +1,54 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-sf-accordion {
+	* {
+		margin: 0;
+	}
+
+	.accordion-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		gap: 30px;
+		border-bottom: 1px solid;
+		transition: border-color ease-out 200ms;
+		transition-delay: 100ms;
+		padding-block: 20px;
+
+		.icon-active {
+			display: none;
+		}
+
+		&.is-active {
+			border-color: transparent;
+
+			.icon {
+				display: none;
+			}
+			.icon-active {
+				display: unset;
+			}
+		}
+	}
+
+	.accordion-body {
+		height: 0;
+		overflow: hidden;
+		transition: height ease-out 400ms;
+		> * {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+body.block-editor-iframe__body {
+	.accordion-body {
+		height: initial;
+	}
+}

@@ -19,10 +19,10 @@ if (!function_exists('add_action')) {
 
 
 // Setup
-define('SF_BLOCKS_PLUGIN_DIR', plugin_dir_path(__FILE__));
+define('PLUGIN_DIR', plugin_dir_path(__FILE__));
 
 // Includes
-include(SF_BLOCKS_PLUGIN_DIR . 'inc/register-blocks.php');
+include(PLUGIN_DIR . 'inc/register-blocks.php');
 
 // Hooks
-add_action('init', 'sf_blocks_register_blocks');
+add_action('init', 'sf_blocks_init');
