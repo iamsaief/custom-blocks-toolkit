@@ -1,19 +1,25 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
+	"name": "custom-blocks-toolkit/team-members",
 	"version": "0.1.0",
-	"name": "sf/accordion",
-	"title": "Accordion",
-	"category": "sf",
-	"icon": "menu",
+	"title": "Team Members Block",
+	"category": "custom-blocks-toolkit",
+	"icon": "id",
 	"description": "Example block scaffolded with Create Block tool.",
 	"example": {},
 	"supports": {
 		"html": false
 	},
-	"textdomain": "accordion",
+	"textdomain": "team-members",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
-	"viewScript": "file:./view.js"
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"columns": {
+			"type": "number",
+			"default": 2
+		}
+	}
 }

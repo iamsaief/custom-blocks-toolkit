@@ -1,0 +1,32 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/team-members/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-custom-blocks-toolkit-team-members {
+  display: grid;
+}
+.wp-block-custom-blocks-toolkit-team-members.has-1-columns {
+  grid-template-columns: repeat(1, 1fr);
+}
+.wp-block-custom-blocks-toolkit-team-members.has-2-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+.wp-block-custom-blocks-toolkit-team-members.has-3-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.wp-block-custom-blocks-toolkit-team-members.has-4-columns {
+  grid-template-columns: repeat(4, 1fr);
+}
+.wp-block-custom-blocks-toolkit-team-members.has-5-columns {
+  grid-template-columns: repeat(5, 1fr);
+}
+.wp-block-custom-blocks-toolkit-team-members.has-6-columns {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/*# sourceMappingURL=style-index.css.map*/

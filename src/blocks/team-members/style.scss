@@ -1,0 +1,15 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-custom-blocks-toolkit-team-members {
+	display: grid;
+	@for $i from 1 through 6 {
+		&.has-#{$i}-columns {
+			grid-template-columns: repeat(#{$i}, 1fr);
+		}
+	}
+}

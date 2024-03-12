@@ -1,0 +1,43 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-custom-blocks-toolkit-team-members {
+	border: 1px dotted rgba(255, 0, 0, 0.5);
+	display: block;
+
+	@for $i from 1 through 6 {
+		&.has-#{$i}-columns {
+			.block-editor-block-list__layout:has(
+					[data-type="custom-blocks-toolkit/team-member"]
+				) {
+				display: grid;
+				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+			.block-list-appender {
+				display: flex;
+				border: 1px dashed;
+				position: unset !important;
+				align-items: center;
+				justify-content: center;
+				padding: 10px !important;
+			}
+
+			[data-type="custom-blocks-toolkit/team-member"] {
+				.wp-block-custom-blocks-toolkit-team-member-img {
+					position: relative;
+					&.is-loading img {
+						opacity: 0.5;
+					}
+					.components-spinner {
+						position: absolute;
+						inset: 0;
+						margin: auto;
+					}
+				}
+			}
+		}
+	}
+}
