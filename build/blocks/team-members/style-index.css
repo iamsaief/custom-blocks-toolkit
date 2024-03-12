@@ -28,5 +28,9 @@
 .wp-block-custom-blocks-toolkit-team-members.has-6-columns {
   grid-template-columns: repeat(6, 1fr);
 }
+.wp-block-custom-blocks-toolkit-team-members img {
+  height: auto;
+  max-width: 100%;
+}
 
 /*# sourceMappingURL=style-index.css.map*/
