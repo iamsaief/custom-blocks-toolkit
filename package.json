@@ -23,8 +23,7 @@
 		"*.js": [
 			"wp-scripts lint-js",
 			"wp-scripts format"
-		],
-		"*.scss": "npx stylelint --fix"
+		]
 	},
 	"devDependencies": {
 		"@wordpress/eslint-plugin": "^17.10.0",
