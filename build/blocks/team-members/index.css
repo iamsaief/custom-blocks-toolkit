@@ -148,5 +148,10 @@
   inset: 0;
   margin: auto;
 }
+.wp-block-custom-blocks-toolkit-team-members .wp-block-custom-blocks-toolkit-team-member-link-form {
+  background: #fff;
+  border: 1px solid;
+  padding: 1em;
+}
 
 /*# sourceMappingURL=index.css.map*/

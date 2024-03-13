@@ -20,10 +20,11 @@
 		"extends": "@wordpress/stylelint-config/scss"
 	},
 	"lint-staged": {
-		"*.js": [
+		"src/*.js": [
 			"wp-scripts lint-js",
 			"wp-scripts format"
-		]
+		],
+		"src/*.scss": "npx stylelint --fix"
 	},
 	"devDependencies": {
 		"@wordpress/eslint-plugin": "^17.10.0",

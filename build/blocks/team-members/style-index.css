@@ -29,4 +29,31 @@
   grid-template-columns: repeat(6, 1fr);
 }
 
+.wp-block-custom-blocks-toolkit-team-member-social-links ul {
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.wp-block-custom-blocks-toolkit-team-member-social-links ul li {
+  display: flex;
+}
+.wp-block-custom-blocks-toolkit-team-member-social-links ul li button {
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+.wp-block-custom-blocks-toolkit-team-member-social-links ul li button:has(.dashicons-plus) {
+  border: 1px dashed;
+}
+.wp-block-custom-blocks-toolkit-team-member-social-links ul li.is-selected button {
+  border: 1px dashed var(--wp-admin-theme-color);
+}
+.wp-block-custom-blocks-toolkit-team-member-social-links ul li a {
+  text-decoration: none;
+  color: currentcolor;
+}
+
 /*# sourceMappingURL=style-index.css.map*/

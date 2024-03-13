@@ -14,3 +14,39 @@
 		}
 	}
 }
+
+.wp-block-custom-blocks-toolkit-team-member {
+	&-social-links ul {
+		padding: 0;
+		list-style: none;
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+
+		li {
+			display: flex;
+
+			button {
+				background: transparent;
+				padding: 0;
+				border: none;
+				cursor: pointer;
+
+				&:has(.dashicons-plus) {
+					border: 1px dashed;
+				}
+			}
+
+			&.is-selected {
+				button {
+					border: 1px dashed var(--wp-admin-theme-color);
+				}
+			}
+
+			a {
+				text-decoration: none;
+				color: currentcolor;
+			}
+		}
+	}
+}
