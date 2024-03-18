@@ -5,7 +5,8 @@
  */
 
 .wp-block-custom-blocks-toolkit-team-members {
-	border: 1px dotted rgba(255, 0, 0, 0.5);
+	border: 1px dashed #dddddd;
+	padding: 4px;
 	display: block;
 
 	@for $i from 1 through 6 {

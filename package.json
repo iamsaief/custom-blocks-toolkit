@@ -27,6 +27,7 @@
 		"src/*.scss": "npx stylelint --fix"
 	},
 	"devDependencies": {
+		"@prettier/plugin-php": "^0.22.2",
 		"@wordpress/eslint-plugin": "^17.10.0",
 		"@wordpress/prettier-config": "^3.10.0",
 		"@wordpress/scripts": "^27.4.0",
@@ -39,6 +40,8 @@
 		"@wordpress/block-editor": "^12.21.0",
 		"@wordpress/blocks": "^12.30.0",
 		"@wordpress/components": "^27.1.0",
+		"@wordpress/data": "^9.23.0",
+		"@wordpress/date": "^4.53.0",
 		"@wordpress/element": "^5.30.0"
 	}
 }

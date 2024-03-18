@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "custom-blocks-toolkit/latest-posts",
+	"version": "0.1.0",
+	"title": "LATEST POSTS",
+	"category": "custom-blocks-toolkit",
+	"icon": "admin-post",
+	"description": "Display and filter latest posts",
+	"keywords": [ "latest", "latest posts" ],
+	"textdomain": "latest-posts",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"numberOfPosts": {
+			"type": "number",
+			"default": 5
+		},
+		"displayFeatImg": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

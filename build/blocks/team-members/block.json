@@ -3,7 +3,7 @@
   "apiVersion": 3,
   "name": "custom-blocks-toolkit/team-members",
   "version": "0.1.0",
-  "title": "Team Members Block",
+  "title": "TEAM MEMBERS",
   "category": "custom-blocks-toolkit",
   "icon": "id",
   "description": "Example block scaffolded with Create Block tool.",

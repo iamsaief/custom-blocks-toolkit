@@ -7,7 +7,8 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-custom-blocks-toolkit-team-members {
-  border: 1px dotted rgba(255, 0, 0, 0.5);
+  border: 1px dashed #dddddd;
+  padding: 4px;
   display: block;
 }
 .wp-block-custom-blocks-toolkit-team-members.has-1-columns .block-editor-block-list__layout:has([data-type="custom-blocks-toolkit/team-member"]) {

@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function custom_blocks_toolkit_init() {
 	$blocks = array(
-        'team-members',
+        'team-members', 'latest-posts'
     );
 
     foreach ($blocks as $block) {
