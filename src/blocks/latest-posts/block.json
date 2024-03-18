@@ -10,21 +10,39 @@
 	"keywords": [ "latest", "latest posts" ],
 	"textdomain": "latest-posts",
 	"supports": {
-		"html": false
+		"html": false,
+		"align": true
 	},
 	"attributes": {
 		"numberOfPosts": {
 			"type": "number",
 			"default": 5
 		},
+		"postsPerColumn": {
+			"type": "number",
+			"default": 3
+		},
 		"displayFeatImg": {
 			"type": "boolean",
 			"default": true
+		},
+		"order": {
+			"type": "string",
+			"default": "desc"
+		},
+		"orderby": {
+			"type": "string",
+			"default": "date"
+		},
+		"categories": {
+			"type": "array",
+			"items": {
+				"type": "object"
+			}
 		}
 	},
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
-	"render": "file:./render.php",
-	"viewScript": "file:./view.js"
+	"render": "file:./render.php"
 }

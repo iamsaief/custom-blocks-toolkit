@@ -595,7 +595,7 @@ module.exports = window["wp"]["i18n"];
   \********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"custom-blocks-toolkit/team-members","version":"0.1.0","title":"TEAM MEMBERS","category":"custom-blocks-toolkit","icon":"id","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"team-members","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","attributes":{"columns":{"type":"number","default":2}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"custom-blocks-toolkit/team-members","version":"0.1.0","title":"TEAM MEMBERS","category":"custom-blocks-toolkit","icon":"id","description":"Display team members in grid","keywords":["team","members"],"supports":{"html":false},"textdomain":"team-members","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","attributes":{"columns":{"type":"number","default":2}}}');
 
 /***/ })
 

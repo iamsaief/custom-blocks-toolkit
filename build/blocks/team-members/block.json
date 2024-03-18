@@ -6,8 +6,11 @@
   "title": "TEAM MEMBERS",
   "category": "custom-blocks-toolkit",
   "icon": "id",
-  "description": "Example block scaffolded with Create Block tool.",
-  "example": {},
+  "description": "Display team members in grid",
+  "keywords": [
+    "team",
+    "members"
+  ],
   "supports": {
     "html": false
   },

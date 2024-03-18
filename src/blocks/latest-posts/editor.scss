@@ -1,10 +1,8 @@
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
-
 .wp-block-custom-blocks-toolkit-latest-posts {
 	border: 1px dashed #dddddd;
 	padding: 4px;
+
+	ul {
+		grid-template-columns: repeat(var(--posts-per-column), 1fr);
+	}
 }
