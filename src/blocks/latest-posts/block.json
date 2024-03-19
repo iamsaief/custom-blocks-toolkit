@@ -39,6 +39,10 @@
 			"items": {
 				"type": "object"
 			}
+		},
+		"excerptLength": {
+			"type": "number",
+			"default": 15
 		}
 	},
 	"editorScript": "file:./index.js",

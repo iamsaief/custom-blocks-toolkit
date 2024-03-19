@@ -7,6 +7,7 @@
 
 .wp-block-custom-blocks-toolkit-team-members {
 	display: grid;
+	gap: 30px;
 
 	@for $i from 1 through 6 {
 		&.has-#{$i}-columns {
@@ -16,6 +17,14 @@
 }
 
 .wp-block-custom-blocks-toolkit-team-member {
+	img[class*="wp-image-"] {
+		aspect-ratio: 2 / 2;
+		object-fit: cover;
+		width: 100%;
+	}
+	:is(img, h4, a, p) {
+		margin: 0 0 10px;
+	}
 	&-social-links ul {
 		padding: 0;
 		list-style: none;

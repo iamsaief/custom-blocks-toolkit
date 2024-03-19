@@ -20,6 +20,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		orderby,
 		categories,
 		postsPerColumn,
+		excerptLength,
 	} = attributes;
 
 	const catIDs =
@@ -77,6 +78,17 @@ export default function Edit( { attributes, setAttributes } ) {
 		setAttributes( { categories: updatedCats } );
 	};
 
+	const getExcerptWords = ( article, numWords ) => {
+		const words = article.split( ' ' );
+		const firstNWords = words.slice(
+			0,
+			Math.min( words.length, numWords )
+		);
+		const excerpt = firstNWords.join( ' ' );
+
+		return excerpt;
+	};
+
 	// console.log( 'POSTS 🚀', posts, 'CATS 🗂️', categorySuggestions );
 
 	return (
@@ -91,8 +103,8 @@ export default function Edit( { attributes, setAttributes } ) {
 					<QueryControls
 						numberOfItems={ numberOfPosts }
 						onNumberOfItemsChange={ onNumberOfItemsChange }
-						maxItems={ 10 }
 						minItems={ 1 }
+						maxItems={ 10 }
 						orderBy={ orderby }
 						onOrderByChange={ ( value ) =>
 							setAttributes( { orderby: value } )
@@ -114,6 +126,18 @@ export default function Edit( { attributes, setAttributes } ) {
 							setAttributes( { postsPerColumn: value } )
 						}
 					/>
+					<RangeControl
+						label={ __(
+							'Number of words in excerpt',
+							'custom-post-query'
+						) }
+						value={ excerptLength }
+						onChange={ ( value ) => {
+							setAttributes( { excerptLength: value } );
+						} }
+						min="10"
+						max="50"
+					/>
 				</PanelBody>
 			</InspectorControls>
 			<div { ...useBlockProps() }>
@@ -126,6 +150,9 @@ export default function Edit( { attributes, setAttributes } ) {
 								post._embedded[ 'wp:featuredmedia' ].length >
 									0 &&
 								post._embedded[ 'wp:featuredmedia' ][ 0 ];
+							const postCategories = allCategories.filter(
+								( cat ) => post.categories.includes( cat.id )
+							);
 							return (
 								<li key={ post.id }>
 									{ displayFeatImg && featImg && (
@@ -137,7 +164,7 @@ export default function Edit( { attributes, setAttributes } ) {
 											alt={ featImg.alt_text }
 										/>
 									) }
-									<h5>
+									<h4 className="title">
 										<a href={ post.link }>
 											{ post.title.rendered ? (
 												<RawHTML>
@@ -147,7 +174,12 @@ export default function Edit( { attributes, setAttributes } ) {
 												__( 'No title', 'latest-posts' )
 											) }
 										</a>
-									</h5>
+									</h4>
+									<p className="category">
+										{ postCategories
+											.map( ( cat ) => cat.name )
+											.join( ', ' ) }
+									</p>
 									{ post.date_gmt && (
 										<time
 											dateTime={ format(
@@ -164,7 +196,10 @@ export default function Edit( { attributes, setAttributes } ) {
 									) }
 									{ post.excerpt.rendered && (
 										<RawHTML>
-											{ post.excerpt.rendered }
+											{ getExcerptWords(
+												post.excerpt.rendered,
+												excerptLength
+											) }
 										</RawHTML>
 									) }
 								</li>

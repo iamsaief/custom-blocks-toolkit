@@ -15,7 +15,12 @@
 					[data-type="custom-blocks-toolkit/team-member"]
 				) {
 				display: grid;
+				gap: 30px;
 				grid-template-columns: repeat(#{$i}, 1fr);
+
+				:is(img, h4, a, p) {
+					margin: 0 0 10px;
+				}
 			}
 
 			.block-list-appender {
@@ -30,6 +35,12 @@
 			[data-type="custom-blocks-toolkit/team-member"] {
 				.wp-block-custom-blocks-toolkit-team-member-img {
 					position: relative;
+
+					img {
+						aspect-ratio: 2 / 2;
+						object-fit: cover;
+						width: 100%;
+					}
 
 					&.is-loading img {
 						opacity: 0.5;

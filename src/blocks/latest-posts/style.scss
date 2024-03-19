@@ -1,4 +1,6 @@
 .wp-block-custom-blocks-toolkit-latest-posts {
+	word-break: break-word;
+
 	ul {
 		padding: 0;
 		margin: 0;
@@ -16,6 +18,24 @@
 		img {
 			max-width: 100%;
 			height: auto;
+		}
+
+		:is(img, h4, a, p) {
+			margin: 0 0 10px;
+		}
+
+		.title {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		.category {
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
 		}
 
 		a {
